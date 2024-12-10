@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zach's app</title>
+    <title>Zach's Wiki</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <style>
@@ -188,7 +188,7 @@
                         <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
                     </svg>
-                    <h1 class="text-3xl text-gray-800 font-serif">Zach's app</h1>
+                    <h1 class="text-3xl text-gray-800 font-serif">Zach's Wiki</h1>
                 </div>
                 <div class="bg-gray-100 px-4 py-1 rounded-full">
                     <span class="text-gray-600">Beta</span>
@@ -206,8 +206,13 @@
                 <!-- Cards -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 card-grid">
                     <!-- First Card with Chat Preview -->
-                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 content-card">
-                        <div class="chat-preview">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 content-card relative">
+                        <div class="chat-preview relative">
+                            <!-- Badge Positioned at the Top-Right -->
+                            <div class="absolute top-2 right-2 text-gray-800 font-medium">
+                                <span class="beta-badge">Current Project</span>
+                            </div>
+                            <!-- Chat Messages -->
                             <div class="chat-message">
                                 <div class="chat-avatar"></div>
                                 <div class="chat-content">
@@ -238,9 +243,9 @@
                                 <path d="M12 20 Q16 23 20 20" stroke="black" fill="none" stroke-width="2"/>
                             </svg>
                         </div>
-                        <div class="h-4 text-gray-800 font-medium mb-2">Current Project</div>
-                        <div class="h-4 text-gray-600">BMO OpenAI Bot</div>
-                    </div>
+                        <div class="h-4 text-gray-800 font-medium mb-2">BMO Bot</div>
+                        <div class="h-4 text-gray-600">OpenAI Powered Discord Bot</div>
+                    </div>                                                       
 
                     <!-- Second Card (Placeholder) -->
                     <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 content-card">
@@ -379,7 +384,7 @@
         <!-- Footer -->
         <footer class="max-w-4xl mx-auto mt-16 pt-8 border-t border-gray-200">
             <p class="text-gray-500 text-sm">
-                © <script>document.write(new Date().getFullYear())</script> Zach's app All rights reserved.
+                © <script>document.write(new Date().getFullYear())</script> Zach's Wiki. All rights reserved.
             </p>
         </footer>
     </div>
