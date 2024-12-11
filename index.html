@@ -169,7 +169,7 @@
                 grid-template-columns: 1fr;
             }
         }
-        
+
         footer a {
         color: inherit; /* Keeps the original text color */
         text-decoration: none; /* Optional: Removes underline for cleaner look */
@@ -430,5 +430,29 @@
             }
         });
     </script>
+    <script>
+        // Define the maximum time interval between clicks (milliseconds)
+        const clickInterval = 500;
+        let clickCount = 0;
+        let lastClickTime = 0;
+    
+        document.addEventListener("click", () => {
+            const currentTime = Date.now();
+    
+            if (currentTime - lastClickTime <= clickInterval) {
+                clickCount++;
+            } else {
+                clickCount = 1; // Reset count if clicks are not close enough
+            }
+    
+            lastClickTime = currentTime;
+    
+            if (clickCount === 4) {
+                // Redirect to dino.html after 4 rapid clicks
+                window.location.href = "dino.html";
+            }
+        });
+    </script>
+    
 </body>
 </html>
